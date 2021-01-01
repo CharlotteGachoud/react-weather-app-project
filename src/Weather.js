@@ -10,8 +10,8 @@ function Weather(){
     imgUrl: "http://openweathermap.org/img/wn/04n@2x.png",
     description: "Broken clouds",
     realFeel: 4,
-    imgMain: "./Balloons.svg",
-    sentance: "How about a nice cup of coco?",
+    imgMain: "./images/Balloons.svg",
+    sentence: "How about a nice cup of coco?",
     humidity: 80,
     wind: 5,
     sunriseTime: "8:06",
@@ -70,7 +70,7 @@ function Weather(){
                     className="illustration"
                   />
                   <p className="sentence">
-                    <em>{weatherData.sentance}</em>
+                    <em>{weatherData.sentence}</em>
                   </p>
                 </div>
 
