@@ -1,12 +1,11 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-undef */
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
 function Weather(props){
-
-  const [weatherData, setWeatherData] = useState({Load: false});
+  const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
   function handleResponse(response){
     setWeatherData({
       load: true,
@@ -19,14 +18,15 @@ function Weather(props){
       wind: Math.round(response.data.wind.speed),
       sunriseTime: "8:06",
       sunsetTime: "16:45",
-      date: "Monday December 21",
-      time: "16:25",
+      date: new Date(response.data.dt * 1000),
+      time: new Date(response.data.dt * 1000),
       sentence: "How about a nice cup of coco?",
       imgMain: "./images/balloons.svg"
     });
+    setReady(true);
   }
 
-  if (weatherData.load){
+  if (ready){
     return (
       <div className="Weather">
             <div className="card">
@@ -36,8 +36,12 @@ function Weather(props){
                     <h1 className="city">{weatherData.city}</h1>
                     <div className="date-time">
                       <p className="last-uptdated">Last updated</p>
-                      <p className="current-date">{weatherData.date}</p>
-                      <p className="time">{weatherData.time}</p>
+                      <p className="current-date">
+                        <FormattedDate date={weatherData.date} />
+                      </p>
+                      <p className="time">
+                        <FormattedHour date={weatherData.time} />
+                      </p>
                     </div>
                     <div className="current-temp">
                       <span className="actual-temp">{weatherData.temperature}</span>
@@ -237,7 +241,7 @@ function Weather(props){
       </div>
     );
   } else {
-      const apiKey = "027401657e14d2712c8487adaadbd48b";
+      const apiKey = "e97bef4bb32bb194f40e72d14b67de97";
       let unit = "metric";
       let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${unit}`;
       axios.get(apiUrl).then(handleResponse);
