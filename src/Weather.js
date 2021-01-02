@@ -217,7 +217,7 @@ function Weather(){
             </div>
           </div>
           <div className="code-by">
-            <a href="https://github.com/CharlotteGachoud/weather-app-react" className="open-source-link" target="_blank" rel="noreferrer">
+            <a href="https://github.com/CharlotteGachoud/react-weather-app-project" className="open-source-link" target="_blank" rel="noreferrer">
               Open-source code
             </a>{" "}
             by{" "}
