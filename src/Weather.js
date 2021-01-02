@@ -10,7 +10,7 @@ function Weather(){
     imgUrl: "http://openweathermap.org/img/wn/04n@2x.png",
     description: "broken clouds",
     realFeel: 4,
-    imgMain: "./images/Balloons.svg",
+    imgMain: "./images/balloons.svg",
     sentence: "How about a nice cup of coco?",
     humidity: 80,
     wind: 5,
@@ -94,7 +94,7 @@ function Weather(){
                     </div>
                   </form>
                     <div className="info">
-                      <div className="local-info">
+                      <div className="humidity">
                         <div className="specifics-info">
                           Humidity
                         </div>
@@ -102,7 +102,7 @@ function Weather(){
                           💧 {weatherData.humidity}%
                         </div>
                       </div>
-                      <div className="local-info">
+                      <div className="wind">
                         <div className="specifics-info">
                           Wind
                         </div>
@@ -110,7 +110,7 @@ function Weather(){
                           💨 {weatherData.wind} km/h
                         </div>
                       </div>
-                      <div className="local-info">
+                      <div className="sunrise">
                         <div className="specifics-info">
                           Sunrise
                         </div>
@@ -118,7 +118,7 @@ function Weather(){
                           🌄 {weatherData.sunriseTime}
                         </div>
                       </div>
-                      <div className="local-info">
+                      <div className="sunset">
                         <div className="specifics-info">
                           Sunset
                         </div>
