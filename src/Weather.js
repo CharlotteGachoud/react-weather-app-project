@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
+import FormattedHour from "./FormattedHour";
 import axios from "axios";
 import "./Weather.css";
 
@@ -18,7 +19,6 @@ function Weather(props){
       sunriseTime: "8:06",
       sunsetTime: "16:45",
       date: new Date(response.data.dt *1000),
-      time: "10:00",
       sentence: "How about a nice cup of coco?",
       imgMain: "./images/balloons.svg"
     });
@@ -38,7 +38,7 @@ function Weather(props){
                         <FormattedDate date={weatherData.date}/>
                       </p>
                       <p className="time">
-                        {weatherData.time}
+                        <FormattedHour date={weatherData.date}/>
                       </p>
                     </div>
                     <div className="current-temp">
