@@ -8,7 +8,7 @@ function Weather(){
     date: "Monday December 21",
     time: "16:25",
     imgUrl: "http://openweathermap.org/img/wn/04n@2x.png",
-    description: "Broken clouds",
+    description: "broken clouds",
     realFeel: 4,
     imgMain: "./images/Balloons.svg",
     sentence: "How about a nice cup of coco?",
@@ -20,20 +20,18 @@ function Weather(){
 
   return (
     <div className="Weather">
-      <div class="wrapper">
-        <div className="container">
           <div className="card">
             <div className="card-body">
               <div className="row">
                 <div className="col">
-                  <h1 className="title city">{weatherData.city}</h1>
+                  <h1 className="city">{weatherData.city}</h1>
                   <div className="date-time">
-                    <p className="last-uptdate">Last updated</p>
+                    <p className="last-uptdated">Last updated</p>
                     <p className="current-date">{weatherData.date}</p>
                     <p className="time">{weatherData.time}</p>
                   </div>
                   <div className="current-temp">
-                    <span className="now-temp">{weatherData.temperature}</span>
+                    <span className="actual-temp">{weatherData.temperature}</span>
                     °C
                   </div>
                   <img
@@ -41,14 +39,14 @@ function Weather(){
                     alt={weatherData.description}
                     className="main-icon"
                   />
-                  <div className="weather-description">
+                  <div className="current-description">
                     {weatherData.description}
                   </div>
-                  <div className="real-feel-text">
+                  <div className="real-feel">
                     Real feel
                     <br />
                     <span className="real-feel-temp">{weatherData.realFeel}</span>
-                    <span className="celsius">°C</span>
+                    <span className="real-feel-unit">°C</span>
                   </div>
                 </div>
 
@@ -58,7 +56,7 @@ function Weather(){
                       <a href="/" className="active metric">
                         Metric
                       </a>
-                      <span className="spacing"> | </span>
+                      <span className="separation"> | </span>
                       <a href="/" className="imperial">
                         Imperial
                       </a>
@@ -77,59 +75,59 @@ function Weather(){
                 <div className="col">
                   <form className="search-form">
                     <div className="row search-bar">
-                      <div className="col">
-                        <div className="form-group">
+                      <div className="col-8">
                           <input
                             type="text"
-                            className="form-control city-search"
-                            placeholder="City"
+                            className="form-control city-search w-100"
+                            placeholder="Enter a city"
                             autoComplete="off"
                             autoFocus="on"
                           />
-                        </div>
                       </div>
-                      <div className="col">
-                        <div className="form-group">
+                      <div className="col-4">
                           <input
                             type="submit"
-                            className="btn btn-primary btn-search"
+                            className="btn btn-primary btn-search w-100"
                             value="Search"
                           />
-                        </div>
                       </div>
                     </div>
                   </form>
-                  <div className="row indications">
-                    <div className="col-6 humidity">Humidity</div>
-                    <div className="col-6 emoji">
-                      <span role="img" aria-label="emoji drop">
-                        💧
-                      </span>
-                      <span>{weatherData.humidity}</span>%
-                    </div>
-                    <div className="col-6 wind">Wind</div>
-                    <div className="col-6 emoji">
-                      <span role="img" aria-label="emoji wind">
-                        💨
-                      </span>
-                      <span>{weatherData.wind}</span>
-                      Km/h
-                    </div>
-                    <div className="col-6 sunrise">Sunrise</div>
-                    <div className="col-6 emoji">
-                      <span role="img" aria-label="emoji sunrise">
-                        🌄
-                      </span>
-                      <span>{weatherData.sunriseTime}</span>
-                    </div>
-                    <div className="col-6 sunset">Sunset</div>
-                    <div className="col-6 emoji">
-                      <span role="img" aria-label="emoji sunset">
-                        🌇
-                      </span>
-                      <span>{weatherData.sunsetTime}</span>
-                    </div>
-                  </div>
+                    <div className="info">
+                      <div className="local-info">
+                        <div className="specifics-info">
+                          Humidity
+                        </div>
+                        <div className ="info-data humidity-data">
+                          💧 {weatherData.humidity}%
+                        </div>
+                      </div>
+                      <div className="local-info">
+                        <div className="specifics-info">
+                          Wind
+                        </div>
+                        <div className ="info-data">
+                          💨 {weatherData.wind} km/h
+                        </div>
+                      </div>
+                      <div className="local-info">
+                        <div className="specifics-info">
+                          Sunrise
+                        </div>
+                        <div className ="info-data">
+                          🌄 {weatherData.sunriseTime}
+                        </div>
+                      </div>
+                      <div className="local-info">
+                        <div className="specifics-info">
+                          Sunset
+                        </div>
+                        <div className ="info-data">
+                          🌇 {weatherData.sunsetTime}
+                        </div>
+                      </div>
+                    </div> 
+
                 </div>
               </div>
               <div className="row forecast">
@@ -138,7 +136,7 @@ function Weather(){
                       Tuesday
                     </p>
                     <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="weather icon" className="forecast-icon"/>
-                    <p className="description-forecast">
+                    <p className="forecast-description">
                       Broken clouds
                     </p>
                     <div className="row min-max-temp">
@@ -153,7 +151,7 @@ function Weather(){
                       Wednesday
                     </p>
                     <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="weather icon" className="forecast-icon"/>
-                    <p className="description-forecast">
+                    <p className="forecast-description">
                       Broken clouds
                     </p>
                     <div className="row min-max-temp">
@@ -167,7 +165,7 @@ function Weather(){
                       Thursday
                     </p>
                     <img src="http://openweathermap.org/img/wn/02n@2x.png" alt="weather icon" className="forecast-icon"/>
-                    <p className="description-forecast">
+                    <p className="forecast-description">
                       few clouds
                     </p>
                     <div className="row min-max-temp">
@@ -180,7 +178,7 @@ function Weather(){
                       Friday
                     </p>
                     <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="weather icon" className="forecast-icon"/>
-                    <p className="description-forecast">
+                    <p className="forecast-description">
                       clear sky
                     </p>
                     <div className="row min-max-temp">
@@ -193,7 +191,7 @@ function Weather(){
                       Saturday
                     </p>
                     <img src="http://openweathermap.org/img/wn/03n@2x.png" alt="weather icon" className="forecast-icon"/>
-                    <p className="description-forecast">
+                    <p className="forecast-description">
                        	scattered clouds 
                     </p>
                     <div className="row min-max-temp">
@@ -206,7 +204,7 @@ function Weather(){
                       Sunday
                     </p>
                     <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="weather icon" className="forecast-icon"/>
-                    <p className="description-forecast">
+                    <p className="forecast-description">
                       rain
                     </p>
                     <div className="row min-max-temp">
@@ -227,8 +225,6 @@ function Weather(){
               Charlotte Gachoud
             </a>
           </div>
-        </div>
-      </div>
     </div>
   );
 }

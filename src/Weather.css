@@ -1,0 +1,132 @@
+body {
+  background: #ebeaf8;
+}
+
+.Weather div.card {
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(120deg, rgba(224, 195, 252, 0.8) 0%, rgba(142, 197, 252, 0.8) 100%);
+}
+
+.Weather h1, .current-temp {
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+.Weather h1,
+.last-uptdated,
+.current-date,
+.time,
+.current-temp,
+.current-description,
+.real-feel,
+.sentence,
+.week-days, 
+.forecast-description,
+.min-max-temp{
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.Weather .last-uptdated, .current-date, .time{
+  margin: 0 auto;
+}
+
+.Weather .current-temp, .current-description, .real-feel{
+  margin: 20px auto 0;
+}
+
+.Weather img {
+  display: block;
+  margin: 0 auto;
+}
+
+.Weather .btn-units {
+  display: block;
+  margin: 10px auto 0;
+  width: 150px;
+  height: 36px;
+}
+
+.Weather .metric,
+.imperial,
+.spacing {
+  color: rgb(177, 210, 250);
+  text-decoration: none;
+}
+
+.Weather .metric:hover,
+.imperial:hover {
+  color: rgb(0, 115, 255);
+}
+
+.active {
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 1px rgba(88, 138, 185, 0.5);
+}
+
+.btn-search,
+.btn-units {
+  background: rgba(0, 86, 179, 0.7);
+  border: rgba(0, 86, 179, 0.7);
+  box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
+  transition: all 200ms ease-in-out;
+  color: rgb(150, 194, 248);
+}
+
+.btn-units:hover,
+.btn-search:hover {
+  color: rgb(0, 115, 255);
+  background: #ffffff;
+}
+
+.Weather .illustration {
+  max-width: 100%;
+  margin: 60px auto 40px;
+}
+
+.Weather .search-form {
+  display: block;
+  margin-top: 10px;
+}
+
+.Weather .current-description,
+.forecast-description:first-letter {
+  text-transform: capitalize;
+}
+
+.Weather .info{
+  text-align: center;
+  margin: 50px auto;
+}
+
+.Weather .local-info{
+  margin: 0 auto 30px;
+}
+
+.Weather .humidity-data{
+  margin: 0 8px 0 0;
+}
+
+.Weather .specifics-info, .week-days {
+ font-weight: 600; 
+  font-size: 20px;
+}
+
+.Weather .current-description, .real-feel, .sentence{
+  font-size: 20px;
+}
+
+.max-temp,
+.degree-sign-max {
+  color: #ec6e4c;
+}
+
+.min-temp,
+.degree-sign-min {
+  color: #0056b3;
+}
+
+.Weather .open-source-link, .max-temp, .degree-sign-max{
+  font-weight: 600;
+}
