@@ -41,42 +41,27 @@ body {
   margin: 0 auto;
 }
 
-.Weather .btn-units {
-  display: block;
-  margin: 10px auto 0;
-  width: 150px;
-  height: 36px;
-}
-
-.Weather .metric,
-.imperial,
-.spacing {
-  color: rgb(177, 210, 250);
-  text-decoration: none;
-}
-
-.Weather .metric:hover,
-.imperial:hover {
-  color: rgb(0, 115, 255);
-}
 
 .active {
   font-weight: 600;
-  text-shadow: 0.5px 0.5px 1px rgba(88, 138, 185, 0.5);
+}
+
+.Weather .btn-units {
+  margin: 10px auto 0;
 }
 
 .btn-search,
 .btn-units {
-  background: rgba(0, 86, 179, 0.7);
-  border: rgba(0, 86, 179, 0.7);
+  color: #ffffff;
+  background: rgba(0, 98, 204, 0.7);
+  border: rgba(0, 98, 204, 0.7);
   box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
   transition: all 200ms ease-in-out;
-  color: rgb(150, 194, 248);
 }
 
 .btn-units:hover,
 .btn-search:hover {
-  color: rgb(0, 115, 255);
+  color: #0062CC;
   background: #ffffff;
 }
 
@@ -124,9 +109,13 @@ body {
 
 .min-temp,
 .degree-sign-min {
-  color: #0056b3;
+  color: #0062CC;
 }
 
 .Weather .open-source-link, .max-temp, .degree-sign-max{
   font-weight: 600;
+}
+
+.Weather .code-by{
+  color:#0062CC;
 }

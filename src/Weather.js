@@ -52,16 +52,16 @@ function Weather(){
 
                 <div className="col">
                   <div className="row">
-                    <button type="button" className="btn btn-primary btn-units">
-                      <a href="/" className="active metric">
-                        Metric
-                      </a>
-                      <span className="separation"> | </span>
-                      <a href="/" className="imperial">
-                        Imperial
-                      </a>
-                    </button>
+                    <div className="col-3"/>
+                    <div className="col-3">
+                      <input type="button" value="Metric" className="btn btn-primary btn-units active"/>
+                    </div>
+                    <div className="col-3">
+                      <input type="button" value="Imperial" className="btn btn-primary btn-units"/>
+                    </div>
+                    <div className="col-3"/>
                   </div>
+
                   <img
                     src={weatherData.imgMain}
                     alt="Scenary"
