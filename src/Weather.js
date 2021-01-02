@@ -4,11 +4,10 @@ import axios from "axios";
 import "./Weather.css";
 
 function Weather(props){
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response){
     setWeatherData({
-      load: true,
+      ready: true,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       mainIcon: response.data.weather[0].icon,
@@ -18,15 +17,14 @@ function Weather(props){
       wind: Math.round(response.data.wind.speed),
       sunriseTime: "8:06",
       sunsetTime: "16:45",
-      date: new Date(response.data.dt * 1000),
-      time: new Date(response.data.dt * 1000),
+      date: new Date(response.data.dt *1000),
+      time: "10:00",
       sentence: "How about a nice cup of coco?",
       imgMain: "./images/balloons.svg"
     });
-    setReady(true);
   }
 
-  if (ready){
+  if (weatherData.ready){
     return (
       <div className="Weather">
             <div className="card">
@@ -37,10 +35,10 @@ function Weather(props){
                     <div className="date-time">
                       <p className="last-uptdated">Last updated</p>
                       <p className="current-date">
-                        <FormattedDate date={weatherData.date} />
+                        <FormattedDate date={weatherData.date}/>
                       </p>
                       <p className="time">
-                        <FormattedHour date={weatherData.time} />
+                        {weatherData.time}
                       </p>
                     </div>
                     <div className="current-temp">
@@ -241,7 +239,7 @@ function Weather(props){
       </div>
     );
   } else {
-      const apiKey = "e97bef4bb32bb194f40e72d14b67de97";
+      const apiKey = "2c7531b6bc89a83ae4af0fd1004343c9";
       let unit = "metric";
       let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${unit}`;
       axios.get(apiUrl).then(handleResponse);
