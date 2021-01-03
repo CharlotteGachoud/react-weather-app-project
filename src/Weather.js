@@ -16,7 +16,7 @@ function Weather(props){
       ready: true,
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
-      mainIcon: response.data.weather[0].icon,
+      mainIcon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       mainDescription: response.data.weather[0].description,
       realFeel: Math.round(response.data.main.feels_like),
       humidity: response.data.main.humidity,
