@@ -6,6 +6,7 @@ import LocalInfo from "./LocalInfo";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 import axios from "axios";
+import Loader from 'react-loader-spinner'
 import "./Weather.css";
 
 function Weather(props){
@@ -52,7 +53,7 @@ function Weather(props){
           <div className="card-body">
             <div className="row search-units">
               <div className="col-10">
-                 <form className="search-form" onSubmit={handleSubmit}>
+                <form className="search-form" onSubmit={handleSubmit}>
                   <div className="row search-bar">
                     <div className="col-6">
                       <input
@@ -75,7 +76,7 @@ function Weather(props){
                       <input type="submit" className="btn btn-primary btn-location w-100" value="📍 Current location"/>
                     </div>
                   </div>
-              </form>
+                </form>
               </div>
               <div className="col-2">
                 < UnitsButtons />
@@ -93,6 +94,7 @@ function Weather(props){
                 <LocalInfo data={weatherData} />
               </div>
             </div>
+
             <div className="forecast">
               <Forecast />
             </div>
@@ -106,7 +108,14 @@ function Weather(props){
   } else {
       search()
       return(
-        "Loading..."
+      <div className="loader">
+        <Loader
+        type="BallTriangle"
+        color="#5A9BD4"
+        height={60}
+        width={60}
+        />
+      </div>
       );
   }
 }

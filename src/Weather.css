@@ -2,6 +2,14 @@ body {
   background: #ebeaf8;
 }
 
+.Weather .loader{
+   position: relative;
+   top: 100px;
+   bottom: 100px;
+   left: 100px;
+   right: 100px;
+}
+
 .Weather div.card {
   border-radius: 10px;
   border: none;
@@ -39,9 +47,7 @@ body {
   width: 50px;
 }
 
-.Weather form {
-  margin: ;
-}
+
 
 .Weather h1,
 .current-temp {
