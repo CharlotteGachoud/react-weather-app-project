@@ -12,6 +12,37 @@ body {
   );
 }
 
+.Weather .search-units{
+  margin: 5px auto 15px;
+}
+
+.Weather .btn-search, .btn-location,
+.btn-units {
+  color: #ffffff;
+  background: rgba(0, 98, 204, 0.7);
+  border: rgba(0, 98, 204, 0.7);
+  box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
+  transition: all 200ms ease-in-out;
+}
+
+.Weather .btn-units:hover, .btn-location:hover,
+.btn-search:hover {
+  color: #0062cc;
+  background: #ffffff;
+}
+
+.Weather .celsius{
+  margin: 0 15px 0 10px;
+}
+
+.Weather .celsius, .fahrenheit{
+  width: 50px;
+}
+
+.Weather form {
+  margin: ;
+}
+
 .Weather h1,
 .current-temp {
   font-size: 38px;
@@ -53,33 +84,10 @@ body {
   font-weight: 600;
 }
 
-.Weather .btn-units {
-  margin: 10px auto 0;
-}
-
-.Weather .btn-search,
-.btn-units {
-  color: #ffffff;
-  background: rgba(0, 98, 204, 0.7);
-  border: rgba(0, 98, 204, 0.7);
-  box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
-  transition: all 200ms ease-in-out;
-}
-
-.Weather .btn-units:hover,
-.btn-search:hover {
-  color: #0062cc;
-  background: #ffffff;
-}
 
 .Weather .illustration {
   max-width: 100%;
   margin: 60px auto 40px;
-}
-
-.Weather .search-form {
-  display: block;
-  margin-top: 10px;
 }
 
 .Weather .current-description,
