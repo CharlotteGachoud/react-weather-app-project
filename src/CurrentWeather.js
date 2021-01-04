@@ -1,7 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedHour from "./FormattedHour";
-import WeatherIcon from "./WeatherIcon";
 
 function CurrentWeather(props){
   return(
@@ -19,10 +18,6 @@ function CurrentWeather(props){
                     <div className="current-temp">
                       <span className="actual-temp">{props.data.temperature}</span>
                       °C
-                    </div>
-                    <WeatherIcon code={props.data.icon} alt={props.data.mainDescription}/>
-                    <div className="current-description">
-                      {props.data.mainDescription}
                     </div>
                     <div className="real-feel">
                       Real feel

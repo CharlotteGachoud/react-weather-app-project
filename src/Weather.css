@@ -12,6 +12,10 @@ body {
   );
 }
 
+.Weather {
+  margin: 0 auto 500px;
+}
+
 .Weather .search-units{
   margin: 5px auto 15px;
 }
@@ -19,7 +23,7 @@ body {
 .Weather .btn-search, .btn-location,
 .btn-units {
   color: #ffffff;
-  background: rgba(0, 98, 204, 0.7);
+  background: rgba(0, 98, 204, 0.702);
   border: rgba(0, 98, 204, 0.7);
   box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
   transition: all 200ms ease-in-out;
@@ -110,6 +114,11 @@ body {
 .week-days {
   font-weight: 600;
   font-size: 20px;
+}
+
+.Weather hr{
+  background: #ffffff79;
+  height: 2px; 
 }
 
 .Weather .current-description,
