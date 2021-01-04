@@ -43,8 +43,6 @@ body {
   width: 50px;
 }
 
-
-
 .Weather h1,
 .current-temp {
   font-size: 38px;
@@ -72,9 +70,12 @@ body {
   margin: 0 auto;
 }
 
-.Weather .current-temp,
-.current-description {
-  margin: 20px auto 0;
+.Weather .current-temp {
+  margin: 30px auto 0;
+}
+
+.Weather .real-feel {
+  margin: 30px auto 30px;
 }
 
 .Weather img {
@@ -85,7 +86,6 @@ body {
 .Weather .active {
   font-weight: 600;
 }
-
 
 .Weather .illustration {
   max-width: 100%;
@@ -116,20 +116,8 @@ body {
   font-size: 20px;
 }
 
-.Weather hr{
-  background: #ffffff79;
-  height: 2px; 
-}
-
-.Weather .current-description,
-.real-feel,
-.sentence {
+.Weather .current-description, .real-feel {
   font-size: 20px;
-}
-
-.Weather .sentence,
-.real-feel {
-  margin: 20px auto 30px;
 }
 
 .Weather .max-temp,
@@ -163,4 +151,9 @@ body {
 }
 .Weather .sunset {
   margin: 0 0 10px 100px;
+}
+
+.Weather hr{
+  background: #ffffff79;
+  height: 2px; 
 }

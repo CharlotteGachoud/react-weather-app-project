@@ -8,9 +8,6 @@ function Description(props){
       <div className="current-description">
         {props.data.mainDescription}
       </div>
-      <p className="sentence">
-        <em>{props.data.sentence}</em>
-      </p>
     </div>
   )
 }

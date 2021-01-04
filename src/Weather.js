@@ -94,7 +94,7 @@ function Weather(props){
                 <LocalInfo data={weatherData} />
               </div>
             </div>
-
+            <hr/>
             <div className="forecast">
               <Forecast />
             </div>
