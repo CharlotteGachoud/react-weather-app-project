@@ -55,7 +55,7 @@ function Weather(props){
               <div className="col-10">
                 <form className="search-form" onSubmit={handleSubmit}>
                   <div className="row search-bar">
-                    <div className="col-6">
+                    <div className="col-10">
                       <input
                         type="text"
                         className="form-control city-search w-100"
@@ -65,15 +65,12 @@ function Weather(props){
                         onChange={handleCitySearch}
                       />
                     </div>
-                    <div className="col-3">
+                    <div className="col-2">
                       <input
                         type="submit"
                         className="btn btn-primary btn-search w-100"
                         value="🔎 Search"
                       />
-                    </div>
-                    <div className="col-3">
-                      <input type="submit" className="btn btn-primary btn-location w-100" value="📍 Current location"/>
                     </div>
                   </div>
                 </form>

@@ -12,10 +12,6 @@ body {
   );
 }
 
-.Weather {
-  margin: 0 auto 500px;
-}
-
 .Weather .search-units{
   margin: 5px auto 15px;
 }
@@ -33,6 +29,10 @@ body {
 .btn-search:hover {
   color: #0062cc;
   background: #ffffff;
+}
+
+.Weather .btn-search{
+  margin: 0 20px 0 0;
 }
 
 .Weather .celsius{
