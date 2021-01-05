@@ -71,11 +71,16 @@ body {
 }
 
 .Weather .current-temp {
-  margin: 30px auto 0;
+  margin: 20px auto 0;
+}
+
+.Weather .icons{
+  transform: scale(2);
+  margin: 30px auto;
 }
 
 .Weather .real-feel {
-  margin: 30px auto 30px;
+  margin: 20px auto;
 }
 
 .Weather img {
@@ -92,7 +97,7 @@ body {
   margin: 60px auto 40px;
 }
 
-.Weather .current-description,
+.Weather .current-description::first-letter,
 .forecast-description:first-letter {
   text-transform: capitalize;
 }
