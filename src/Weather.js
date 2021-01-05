@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import UnitsButtons from "./row-1/UnitsButtons";
 import CurrentWeather from "./row-2/CurrentWeather";
-import Illustration from "./row-2/Illustration";
+import MiddleSection from "./row-2/MiddleSection";
 import LocalInfo from "./row-2/LocalInfo";
 import Forecast from "./row-3/Forecast";
 import Footer from "./row-3/Footer";
@@ -85,7 +85,7 @@ function Weather(props){
                 <CurrentWeather data={weatherData} />
               </div>
               <div className="col columns">
-                <Illustration data={weatherData}/>
+                <MiddleSection data={weatherData}/>
               </div>
               <div className="col columns">
                 <LocalInfo data={weatherData} />

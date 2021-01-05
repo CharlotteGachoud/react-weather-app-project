@@ -90,9 +90,12 @@ body {
   font-weight: 600;
 }
 
-.Weather .illustration {
-  max-width: 300px;
+.Weather .jaws, .titanic{
   margin: 60px auto 80px;
+}
+
+.Weather .leaves{
+  margin: 20px auto;
 }
 
 .Weather .current-description::first-letter,
