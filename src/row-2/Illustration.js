@@ -1,9 +1,10 @@
 import React from "react";
+import ChangeImage from "./ChangeImage";
 
 function Illustration(props){
   return(
     <div className="Illustration">
-      <img src="./images/Winter_magic.svg" className="illustration" alt="Scenary"/>
+      <ChangeImage temperature={props.data.temperature}/>
       <p className="sentence">
         <em>{props.data.sentence}</em>
       </p>
