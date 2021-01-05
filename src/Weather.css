@@ -32,15 +32,15 @@ body {
 }
 
 .Weather .btn-search{
-  margin: 0 20px 0 0;
-}
-
-.Weather .celsius{
-  margin: 0 15px 0 10px;
+  margin: 0 50px 0 0;
 }
 
 .Weather .celsius, .fahrenheit{
-  width: 50px;
+  margin: 0 5px 0 5px;
+}
+
+.Weather .celsius, .fahrenheit{
+  width: 40px;
 }
 
 .Weather h1,
@@ -70,7 +70,7 @@ body {
   margin: 0 auto;
 }
 
-.Weather .current-temp {
+.Weather .current-temp{
   margin: 20px auto 0;
 }
 
@@ -79,7 +79,7 @@ body {
   margin: 30px auto;
 }
 
-.Weather .real-feel {
+.Weather .real-feel{
   margin: 20px auto;
 }
 
@@ -93,8 +93,8 @@ body {
 }
 
 .Weather .illustration {
-  max-width: 100%;
-  margin: 60px auto 40px;
+  max-width: 300px;
+  margin: 60px auto 80px;
 }
 
 .Weather .current-description::first-letter,
@@ -104,7 +104,7 @@ body {
 
 .Weather .info {
   text-align: center;
-  margin: 50px auto;
+  margin: 100px auto 50px;
 }
 
 .Weather .local-info {
@@ -121,7 +121,7 @@ body {
   font-size: 20px;
 }
 
-.Weather .current-description, .real-feel {
+.Weather .current-description, .real-feel, .sentence {
   font-size: 20px;
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import UnitsButtons from "./UnitsButtons";
-import CurrentWeather from "./CurrentWeather";
-import Illustration from "./Illustration";
-import LocalInfo from "./LocalInfo";
-import Forecast from "./Forecast";
-import Footer from "./Footer";
+import UnitsButtons from "./row-1/UnitsButtons";
+import CurrentWeather from "./row-2/CurrentWeather";
+import Illustration from "./row-2/Illustration";
+import LocalInfo from "./row-2/LocalInfo";
+import Forecast from "./row-3/Forecast";
+import Footer from "./row-3/Footer";
 import axios from "axios";
 import Loader from 'react-loader-spinner'
 import "./Weather.css";
@@ -25,7 +25,7 @@ function Weather(props){
       sunriseTime: "8:06",
       sunsetTime: "16:45",
       date: new Date(response.data.dt *1000),
-      sentence: "How about a nice cup of coco?",
+      sentence: "Sentence",
       imgMain: "./images/balloons.svg"
     });
   }
