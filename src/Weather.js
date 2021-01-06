@@ -25,8 +25,6 @@ function Weather(props){
       sunriseTime: "8:06",
       sunsetTime: "16:45",
       date: new Date(response.data.dt *1000),
-      sentence: "Sentence",
-      imgMain: "./images/balloons.svg"
     });
   }
 

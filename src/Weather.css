@@ -90,6 +90,12 @@ body {
   font-weight: 600;
 }
 
+.Weather .giphy-embed{
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
 .Weather .jaws, .titanic{
   margin: 60px auto 80px;
 }
