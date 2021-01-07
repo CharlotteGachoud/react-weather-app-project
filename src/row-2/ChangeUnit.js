@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 
 function ChangeUnit(props){
-  const [unit, setunit] = useState("celsius");
+  const [unit, setUnit] = useState("celsius");
 
   function showFahrenheit(event){
     event.preventDefault();
-    setunit("fahrenheit");
+    setUnit("fahrenheit");
+    props.setUnit("imperial")
   }
 
   function showCelsius(event){
     event.preventDefault();
-    setunit("celsius");
+    setUnit("celsius");
+    props.setUnit("metric")
   }
 
   function fahrenheit(){
@@ -36,8 +38,6 @@ return(
     </div>
   )
   }
-
-  
 }
 
 export default ChangeUnit;

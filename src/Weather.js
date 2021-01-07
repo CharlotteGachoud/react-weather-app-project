@@ -12,7 +12,7 @@ import "./Weather.css";
 function Weather(props){
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  const [unit, setUnit] = useState("metric")
+  const [unit, setUnit] = useState("celsius")
 
   function handleResponse(response){
     console.log(response.data);
@@ -21,14 +21,15 @@ function Weather(props){
       city: response.data.name,
       temperature: Math.round(response.data.main.temp),
       icon: response.data.weather[0].icon,
-      mainDescription: response.data.weather[0].description,
+      description: response.data.weather[0].description,
       realFeel: Math.round(response.data.main.feels_like),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       sunrise: response.data.sys.sunrise + response.data.timezone,
       sunset: response.data.sys.sunset + response.data.timezone,
       date: new Date(response.data.dt *1000),
-      coordinates: response.data.coord,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
     });
   }
 
@@ -88,7 +89,7 @@ function Weather(props){
             <div className="row">
 
               <div className="col columns">
-                <CurrentWeather data={weatherData} Unit={unit} setUnit={setUnit} />
+                <CurrentWeather data={weatherData} unit={unit} setUnit={setUnit} />
               </div>
 
               <div className="col columns">
@@ -96,7 +97,7 @@ function Weather(props){
               </div>
 
               <div className="col columns">
-                <LocalInfo data={weatherData} Unit={unit} setUnit={setUnit} />
+                <LocalInfo data={weatherData} unit={unit} setUnit={setUnit} />
               </div>
 
             </div>
@@ -106,7 +107,7 @@ function Weather(props){
             <div className="forecast">
               <Forecast city={weatherData.city} Unit={unit} setUnit={setUnit}/>
             </div>
-            
+
           </div>
         </div>
 

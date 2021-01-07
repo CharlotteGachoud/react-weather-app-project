@@ -23,14 +23,14 @@ function CurrentWeather(props){
                     </div>
 
                     <div className="current-temp">
-                      <ChangeUnit celsius={props.data.temperature}/>
+                      <ChangeUnit celsius={props.data.temperature} unit={props.unit} setUnit={props.setUnit}/>
                     </div>
 
                     <div className="icons">
                       <WeatherIcon code={props.data.icon} alt={props.data.mainDescription}/>
                     </div>
                     <div className="current-description">
-                      {props.data.mainDescription}
+                      {props.data.description}
                     </div>
                     <div className="real-feel">
                       Real feel
