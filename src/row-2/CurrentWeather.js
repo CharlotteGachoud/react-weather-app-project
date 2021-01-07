@@ -2,9 +2,12 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedHour from "./FormattedHour";
 import WeatherIcon from "./WeatherIcon";
+import ChangeUnit from "./ChangeUnit";
 
 
 function CurrentWeather(props){
+
+  
   return(
     <div className="CurrentWeather">
       <h1 className="city">{props.data.city}</h1>
@@ -17,10 +20,10 @@ function CurrentWeather(props){
                         <FormattedHour date={props.data.date}/>
                       </p>
                     </div>
-                    <div className="current-temp">
-                      <span className="actual-temp">{props.data.temperature}</span>
-                      °C
-                    </div>
+                          <div className="current-temp">
+                            <ChangeUnit celsius={props.data.temperature}/>
+                          </div>
+
                     <div className="icons">
                       <WeatherIcon code={props.data.icon} alt={props.data.mainDescription}/>
                     </div>
