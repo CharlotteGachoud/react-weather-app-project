@@ -12,6 +12,7 @@ import "./Weather.css";
 function Weather(props){
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState("metric")
 
   function handleResponse(response){
     console.log(response.data);
@@ -47,6 +48,28 @@ function Weather(props){
     setCity(event.target.value);
   }
 
+  let form =  <form className="search-form" onSubmit={handleSubmit}>
+                <div className="row search-bar">
+                  <div className="col-10">
+                    <input
+                      type="text"
+                      className="form-control city-search w-100"
+                      placeholder="Enter a city"
+                      autoComplete="off"
+                      autoFocus="on"
+                      onChange={handleCitySearch}
+                    />
+                  </div>
+                  <div className="col-2">
+                    <input
+                      type="submit"
+                      className="btn btn-primary btn-search w-100"
+                      value="🔎 Search"
+                    />
+                  </div>
+                </div>
+              </form>;
+
   if (weatherData.ready){
     return (
       <div className="Weather">
@@ -54,27 +77,7 @@ function Weather(props){
           <div className="card-body">
             <div className="row search-units">
               <div className="col-10">
-                <form className="search-form" onSubmit={handleSubmit}>
-                  <div className="row search-bar">
-                    <div className="col-10">
-                      <input
-                        type="text"
-                        className="form-control city-search w-100"
-                        placeholder="Enter a city"
-                        autoComplete="off"
-                        autoFocus="on"
-                        onChange={handleCitySearch}
-                      />
-                    </div>
-                    <div className="col-2">
-                      <input
-                        type="submit"
-                        className="btn btn-primary btn-search w-100"
-                        value="🔎 Search"
-                      />
-                    </div>
-                  </div>
-                </form>
+               {form}
               </div>
               <div className="col-2">
                 < UnitsButtons/>
@@ -83,18 +86,18 @@ function Weather(props){
             
             <div className="row">
               <div className="col columns">
-                <CurrentWeather data={weatherData} />
+                <CurrentWeather data={weatherData} Unit={unit} setUnit={setUnit} />
               </div>
               <div className="col columns">
                 <MiddleSection data={weatherData}/>
               </div>
               <div className="col columns">
-                <LocalInfo data={weatherData} />
+                <LocalInfo data={weatherData} Unit={unit} setUnit={setUnit} />
               </div>
             </div>
             <hr/>
             <div className="forecast">
-              <Forecast city={weatherData.city}/>
+              <Forecast city={weatherData.city} Unit={unit} setUnit={setUnit}/>
             </div>
           </div>
         </div>

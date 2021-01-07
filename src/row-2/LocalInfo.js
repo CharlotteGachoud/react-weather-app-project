@@ -1,6 +1,7 @@
 import React from "react";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
+import Wind from "./Wind";
 
 function LocalInfo(props){
   return(
@@ -19,7 +20,7 @@ function LocalInfo(props){
            Wind
          </div>
          <div className ="info-data">
-           💨 {props.data.wind} km/h
+           <Wind data={props.data} unit={props.unit}/>
          </div>
        </div>
        <div className="sunrise">
