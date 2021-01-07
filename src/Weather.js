@@ -24,8 +24,8 @@ function Weather(props){
       realFeel: Math.round(response.data.main.feels_like),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
-      sunriseTime: "8:06",
-      sunsetTime: "16:45",
+      sunrise: response.data.sys.sunrise + response.data.timezone,
+      sunset: response.data.sys.sunset + response.data.timezone,
       date: new Date(response.data.dt *1000),
       coordinates: response.data.coord,
     });

@@ -1,4 +1,6 @@
 import React from "react";
+import Sunrise from "./Sunrise";
+import Sunset from "./Sunset";
 
 function LocalInfo(props){
   return(
@@ -25,7 +27,7 @@ function LocalInfo(props){
            Sunrise
          </div>
          <div className ="info-data">
-           🌄 {props.data.sunriseTime}
+           <Sunrise sunrise={props.data.sunrise} />
          </div>
        </div>
        <div className="sunset">
@@ -33,7 +35,7 @@ function LocalInfo(props){
            Sunset
          </div>
          <div className ="info-data">
-           🌇 {props.data.sunsetTime}
+           <Sunset sunset={props.data.sunset} />
          </div>
        </div>
       </div> 
