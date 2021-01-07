@@ -3,8 +3,8 @@ import UnitsButtons from "./row-1/UnitsButtons";
 import CurrentWeather from "./row-2/CurrentWeather";
 import MiddleSection from "./row-2/MiddleSection";
 import LocalInfo from "./row-2/LocalInfo";
-import Forecast from "./row-3/Forecast";
-import Footer from "./row-3/Footer";
+import Forecast from "./row-2/Forecast";
+import Footer from "./row-2/Footer";
 import axios from "axios";
 import Loader from 'react-loader-spinner'
 import "./Weather.css";
@@ -12,7 +12,9 @@ import "./Weather.css";
 function Weather(props){
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response){
+    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -25,6 +27,7 @@ function Weather(props){
       sunriseTime: "8:06",
       sunsetTime: "16:45",
       date: new Date(response.data.dt *1000),
+      coordinates: response.data.coord,
     });
   }
 
@@ -91,7 +94,7 @@ function Weather(props){
             </div>
             <hr/>
             <div className="forecast">
-              <Forecast />
+              <Forecast city={weatherData.city}/>
             </div>
           </div>
         </div>
