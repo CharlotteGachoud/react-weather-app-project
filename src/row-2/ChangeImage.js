@@ -25,7 +25,7 @@ function ChangeImage(props){
     <div className="leaves">
       <iframe title="Leaf" src="https://giphy.com/embed/xFnAObsU5nMrUUC3HX" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-aww-eyebleach-xFnAObsU5nMrUUC3HX">via GIPHY</a></p>
       <p className="sentence">
-        Oh my god! are these..? ...LEAVES 🤪
+        Oh my god! Are these..? ...LEAVES 🤪
       </p>
     </div>
     );

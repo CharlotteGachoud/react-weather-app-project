@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import FormattedHour from "./FormattedHour";
 import WeatherIcon from "./WeatherIcon";
 import ChangeUnit from "./ChangeUnit";
+import RealFeel from "./RealFeel";
 
 
 function CurrentWeather(props){
@@ -20,9 +21,10 @@ function CurrentWeather(props){
                         <FormattedHour date={props.data.date}/>
                       </p>
                     </div>
-                          <div className="current-temp">
-                            <ChangeUnit celsius={props.data.temperature}/>
-                          </div>
+
+                    <div className="current-temp">
+                      <ChangeUnit celsius={props.data.temperature}/>
+                    </div>
 
                     <div className="icons">
                       <WeatherIcon code={props.data.icon} alt={props.data.mainDescription}/>
@@ -33,7 +35,9 @@ function CurrentWeather(props){
                     <div className="real-feel">
                       Real feel
                       <br />
-                      <span className="real-feel-temp">{props.data.realFeel}</span>
+                      <span className="real-feel-temp">
+                        <RealFeel data={props.data} unit={props.unit}/>
+                      </span>{" "}
                       <span className="real-feel-unit">°C</span>
                     </div>
     </div>

@@ -79,28 +79,37 @@ function Weather(props){
               <div className="col-10">
                {form}
               </div>
+
               <div className="col-2">
                 < UnitsButtons/>
               </div>
             </div>
             
             <div className="row">
+
               <div className="col columns">
                 <CurrentWeather data={weatherData} Unit={unit} setUnit={setUnit} />
               </div>
+
               <div className="col columns">
                 <MiddleSection data={weatherData}/>
               </div>
+
               <div className="col columns">
                 <LocalInfo data={weatherData} Unit={unit} setUnit={setUnit} />
               </div>
+
             </div>
+
             <hr/>
+
             <div className="forecast">
               <Forecast city={weatherData.city} Unit={unit} setUnit={setUnit}/>
             </div>
+            
           </div>
         </div>
+
         <div className="footer">
           <Footer />
         </div>
