@@ -9,7 +9,6 @@ function Forecast(props){
   const [forecast, setForecast] = useState(null);
 
    function displayForecast(response){
-     console.log(response.data);
      setForecast(response.data)
      setLoaded(true);
   }
@@ -28,7 +27,9 @@ function Forecast(props){
   } else{
     let apiKey = "2c7531b6bc89a83ae4af0fd1004343c9";
     let unit = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.data.lat}&lon=${props.data.lon}&appid=${apiKey}&units=${unit}`;
+    let lat = props.data.lat;
+    let lon = props.data.lon;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(displayForecast);
     return (
         <div className="float-left">

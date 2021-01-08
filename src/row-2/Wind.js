@@ -4,7 +4,7 @@ function Wind(props) {
     let windMetric = props.data.wind;
     let windImperial = Math.round(props.data.wind * 0.6);
 
-    if (props.unit === "fahrenheit") {
+    if (props.unit === "imperial") {
      return(
        <div className="Wind">
          💨 {windImperial} mph

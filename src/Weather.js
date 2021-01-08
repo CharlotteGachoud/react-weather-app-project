@@ -64,7 +64,7 @@ function Weather(props){
                   <div className="col-2">
                     <input
                       type="submit"
-                      className="btn btn-primary btn-search w-100"
+                      className="btn btn-primary btn-search"
                       value="🔎 Search"
                     />
                   </div>
@@ -105,7 +105,7 @@ function Weather(props){
             <hr/>
 
             <div className="forecast">
-              <Forecast city={weatherData.city} Unit={unit} setUnit={setUnit}/>
+              <Forecast city={weatherData.city} data={weatherData} Unit={unit} setUnit={setUnit}/>
             </div>
 
           </div>

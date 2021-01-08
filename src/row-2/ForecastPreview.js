@@ -29,7 +29,7 @@ function ForecastPreview(props){
           {description()}
         </div>
         <div className="temperature">
-          <strong>{fahrenheitMax}°C</strong> | {fahrenheitMin}°C
+          <strong>{fahrenheitMax}°F</strong> | {fahrenheitMin}°F
         </div>
       </div>
     );
