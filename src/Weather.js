@@ -82,7 +82,7 @@ function Weather(props){
               </div>
 
               <div className="col-2">
-                < UnitsButtons/>
+                < UnitsButtons setUnit={setUnit}/>
               </div>
             </div>
             

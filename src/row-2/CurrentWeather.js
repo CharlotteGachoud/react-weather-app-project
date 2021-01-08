@@ -2,7 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedHour from "./FormattedHour";
 import WeatherIcon from "./WeatherIcon";
-import ChangeUnit from "./ChangeUnit";
+import CurrentTemp from "./CurrentTemp";
 import RealFeel from "./RealFeel";
 
 
@@ -23,7 +23,7 @@ function CurrentWeather(props){
                     </div>
 
                     <div className="current-temp">
-                      <ChangeUnit celsius={props.data.temperature} unit={props.unit} setUnit={props.setUnit}/>
+                      <CurrentTemp data={props.data} unit={props.unit}/>
                     </div>
 
                     <div className="icons">
