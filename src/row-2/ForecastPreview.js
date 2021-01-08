@@ -4,7 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 
 function ForecastPreview(props){
   let date = new Date(props.data.dt * 1000);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", ]
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", ]
   let day = days[date.getDay()];
   let celsiusMax = Math.round(props.data.temp.max);
   let celsiusMin = Math.round(props.data.temp.min);
@@ -29,7 +29,7 @@ function ForecastPreview(props){
           {description()}
         </div>
         <div className="temperature">
-          <strong>{fahrenheitMax}°F</strong> | {fahrenheitMin}°F
+          <strong>{fahrenheitMax} °F</strong> | {fahrenheitMin} °F
         </div>
       </div>
     );
@@ -46,7 +46,7 @@ function ForecastPreview(props){
             {description()}
           </div>
           <div className="temperature">
-            <strong>{celsiusMax}°C</strong> | {celsiusMin}°C
+            <strong>{celsiusMax} °C</strong> | {celsiusMin} °C
           </div>
         </div>
       );

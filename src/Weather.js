@@ -15,7 +15,7 @@ function Weather(props){
   const [unit, setUnit] = useState("celsius")
 
   function handleResponse(response){
-    console.log(response.data);
+
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -105,7 +105,7 @@ function Weather(props){
             <hr/>
 
             <div className="forecast">
-              <Forecast city={weatherData.city} data={weatherData} Unit={unit} setUnit={setUnit}/>
+              <Forecast city={weatherData.city} data={weatherData} unit={unit} setUnit={setUnit}/>
             </div>
 
           </div>

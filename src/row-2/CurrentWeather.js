@@ -38,7 +38,6 @@ function CurrentWeather(props){
                       <span className="real-feel-temp">
                         <RealFeel data={props.data} unit={props.unit}/>
                       </span>{" "}
-                      <span className="real-feel-unit">°C</span>
                     </div>
     </div>
   )
