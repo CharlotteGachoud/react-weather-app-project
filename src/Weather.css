@@ -1,5 +1,5 @@
 body {
-  background: #ebeaf8;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 
 .Weather .card {
@@ -36,4 +36,5 @@ body {
 .Weather hr{
   background: #ffffff79;
   height: 2px; 
+  margin: 20px auto;
 }

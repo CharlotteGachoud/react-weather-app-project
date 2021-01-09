@@ -5,16 +5,36 @@ import "./ForecastPreview.css";
 
 function ForecastPreview(props){
   let date = new Date(props.data.dt * 1000);
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", ]
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   let day = days[date.getDay()];
-  let celsiusMax = Math.round(props.data.temp.max);
-  let celsiusMin = Math.round(props.data.temp.min);
-  let fahrenheitMax = Math.round((celsiusMax * 9/5) + 32);
-  let fahrenheitMin = Math.round((celsiusMin * 9/5) + 32);
 
    function description(){
       let description = props.data.weather[0].description;
       return `${description}`;
+    }
+
+    function fahrenheitMax(){
+      return(
+        Math.round((props.data.temp.max * 9/5) + 32)
+      );
+    }
+
+    function fahrenheitMin(){
+      return(
+        Math.round((props.data.temp.min * 9/5) + 32)
+      );
+    }
+
+    function celsiusMax(){
+      return(
+        Math.round(props.data.temp.max)
+      );
+    }
+
+    function celsiusMin(){
+      return(
+        Math.round(props.data.temp.min)
+      );
     }
 
   if(props.unit === "imperial"){
@@ -30,7 +50,7 @@ function ForecastPreview(props){
           {description()}
         </div>
         <div className="temperature">
-          <span className="max-temp">{fahrenheitMax}</span><span className="unitMax">°F</span> <span className="separation">|</span> <span className="min-temp">{fahrenheitMin}</span><span className="unitMin">°F</span>
+          <span className="max-temp">{fahrenheitMax()}</span><span className="unitMax">°F</span> <span className="separation">|</span> <span className="min-temp">{fahrenheitMin()}</span><span className="unitMin">°F</span>
         </div>
       </div>
     );
@@ -47,7 +67,7 @@ function ForecastPreview(props){
             {description()}
           </div>
           <div className="temperature">
-            <span className="max-temp">{celsiusMax}</span><span className="unitMax">°C</span> <span className="separation">|</span> <span className="min-temp">{celsiusMin}</span><span className="unitMin">°C</span>
+            <span className="max-temp">{celsiusMax()}</span><span className="unitMax">°C</span> <span className="separation">|</span> <span className="min-temp">{celsiusMin()}</span><span className="unitMin">°C</span>
           </div>
         </div>
       );

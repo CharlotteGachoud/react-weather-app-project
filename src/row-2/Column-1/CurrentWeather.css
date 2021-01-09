@@ -31,5 +31,5 @@
 
 .CurrentWeather .real-feel,
 .CurrentWeather .current-temp{
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
