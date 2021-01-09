@@ -10,7 +10,7 @@ function Sunrise(props) {
 
     return(
       <div className="Sunrise">
-        <img src="Images/sunrise.svg" alt="sunrise" className="icon-sun"/> {riseHour}:{riseMinutes}
+        <img src="Images/sunrise-filled.svg" alt="sunrise" className="icon-sun"/> {riseHour}:{riseMinutes}
       </div>
     );
 }

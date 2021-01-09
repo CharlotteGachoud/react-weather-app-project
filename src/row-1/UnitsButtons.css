@@ -1,0 +1,17 @@
+.UnitsButtons .btn-units{
+  color: #ffffff;
+  background: #56A0EE;
+  border: #56A0EE;
+  box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
+  transition: all 200ms ease-in-out;
+}
+
+.UnitsButtons .btn-units:hover{
+  color: #0062cc;
+  background: #ffffff;
+}
+
+.UnitsButtons .celsius,
+.UnitsButtons .fahrenheit{
+  margin: 0 8px 8px;
+}

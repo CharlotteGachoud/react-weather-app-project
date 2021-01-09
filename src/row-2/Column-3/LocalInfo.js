@@ -2,21 +2,21 @@ import React from "react";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
 import Wind from "./Wind";
+import "./LocalInfo.css";
 
 function LocalInfo(props){
   return(
     <div className="LocalInfo">
-      <div className="info">
        <div className="humidity">
-         <div className="specifics-info">
+         <div className="conditions">
            Humidity
          </div>
          <div className ="info-data humidity-data">
-           <i class="fas fa-tint"></i> {props.data.humidity}%
+           <i class="fas fa-tint drop"></i> {props.data.humidity}%
          </div>
        </div>
        <div className="wind">
-         <div className="specifics-info">
+         <div className="conditions">
            Wind
          </div>
          <div className ="info-data">
@@ -24,7 +24,7 @@ function LocalInfo(props){
          </div>
        </div>
        <div className="sunrise">
-         <div className="specifics-info">
+         <div className="conditions">
            Sunrise
          </div>
          <div className ="info-data">
@@ -32,14 +32,13 @@ function LocalInfo(props){
          </div>
        </div>
        <div className="sunset">
-         <div className="specifics-info">
+         <div className="conditions">
            Sunset
          </div>
          <div className ="info-data">
            <Sunset sunset={props.data.sunset} />
          </div>
        </div>
-      </div> 
     </div>
   )
 }

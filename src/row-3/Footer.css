@@ -12,6 +12,9 @@
   color: #0056B3;
 }
 
-.Footer .open-source-link, .author-link, .icon-link{
+.Footer .open-source-link, 
+.Footer .author-link, 
+.Footer .icon-link,
+.Footer .link{
    font-weight: 600;
 }

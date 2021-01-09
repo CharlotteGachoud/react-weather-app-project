@@ -1,0 +1,35 @@
+.CurrentWeather .city,
+.CurrentWeather .temperature{
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+.CurrentWeather .last-uptdated,
+.CurrentWeather .date,
+.CurrentWeather .time{
+  margin: 0;
+}
+
+.CurrentWeather .actual-temp,
+.CurrentWeather .feel-temp{
+  margin: 0 3px 0;
+}
+
+.CurrentWeather .icons{
+  transform: scale(2);
+  margin: 30px auto;
+}
+
+.CurrentWeather .description,
+.CurrentWeather .real-feel{
+  font-size: 20px;
+}
+
+.CurrentWeather .description::first-letter{
+  text-transform: capitalize;
+}
+
+.CurrentWeather .real-feel,
+.CurrentWeather .current-temp{
+  margin: 20px auto;
+}

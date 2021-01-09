@@ -69,7 +69,7 @@ function Weather(props){
                   <div className="col-8">
                     <input
                       type="text"
-                      className="form-control city-search w-100"
+                      className="form-control city-search"
                       placeholder="Enter a city"
                       autoComplete="off"
                       autoFocus="on"
@@ -83,8 +83,6 @@ function Weather(props){
                     >
                       <i class="fas fa-search"></i>
                     </button>
-                  </div>
-                  <div className="col-2">
                     <button
                       type="submit"
                       className="btn btn-primary btn-location"
@@ -92,6 +90,9 @@ function Weather(props){
                     >
                       <i class="fas fa-map-marker-alt"></i>
                     </button>
+                  </div>
+                  <div className="col-2">
+                    < UnitsButtons setUnit={setUnit}/>
                   </div>
                 </div>
               </form>;
@@ -102,17 +103,12 @@ function Weather(props){
         <div className="card">
           <div className="card-body">
             <div className="row search-units">
-              <div className="col-10">
+              <div className="col-12">
                {form}
-              </div>
-
-              <div className="col-2">
-                < UnitsButtons setUnit={setUnit}/>
               </div>
             </div>
             
             <div className="row">
-
               <div className="col columns">
                 <CurrentWeather data={weatherData} unit={unit} setUnit={setUnit} />
               </div>
@@ -124,7 +120,6 @@ function Weather(props){
               <div className="col columns">
                 <LocalInfo data={weatherData} unit={unit} setUnit={setUnit} />
               </div>
-
             </div>
 
             <hr/>
@@ -132,7 +127,6 @@ function Weather(props){
             <div className="forecast">
               <Forecast city={weatherData.city} data={weatherData} unit={unit} setUnit={setUnit}/>
             </div>
-
           </div>
         </div>
 

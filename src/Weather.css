@@ -2,7 +2,7 @@ body {
   background: #ebeaf8;
 }
 
-.Weather div.card {
+.Weather .card {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(
@@ -12,153 +12,25 @@ body {
   );
 }
 
-.Weather .search-units{
-  margin: 5px auto 15px;
+.Weather .search-form{
+  margin: 0 0 10px 10px;
 }
 
-.Weather .btn-search, .btn-units {
+.Weather .btn-search,
+.Weather .btn-location{
   color: #ffffff;
   background: #56A0EE;
   border: #56A0EE;
+  margin: 0 8px 8px;
+  width: 39px;
   box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
   transition: all 200ms ease-in-out;
 }
 
-.Weather .btn-units:hover, .btn-search:hover {
-  color: #0062cc;
+.Weather .btn-search:hover,
+.Weather .btn-location:hover {
+  color: #0974e6;
   background: #ffffff;
-}
-
-.Weather .btn-search{
-  margin: 0 50px 0 0;
-}
-
-.Weather .celsius, .fahrenheit{
-  margin: 0 5px 0 5px;
-}
-
-.Weather .celsius, .fahrenheit{
-  width: 40px;
-}
-
-.Weather h1,
-.current-temp {
-  font-size: 38px;
-  font-weight: bolder;
-}
-
-.Weather h1,
-.last-uptdated,
-.current-date,
-.time,
-.current-temp,
-.current-description,
-.real-feel,
-.sentence,
-.week-days,
-.forecast-description,
-.min-max-temp {
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-.Weather .last-uptdated,
-.current-date,
-.time {
-  margin: 0 auto;
-}
-
-.Weather .current-temp{
-  margin: 20px auto 0;
-}
-
-.Weather .icons{
-  transform: scale(2);
-  margin: 30px auto;
-}
-
-.Weather .real-feel{
-  margin: 20px auto;
-}
-
-.Weather img {
-  display: block;
-  margin: 0 auto;
-}
-
-.Weather .active {
-  font-weight: 600;
-}
-
-.Weather .giphy-embed{
-  display: block;
-  margin: 0 auto;
-  max-width: 350px;
-}
-
-.Weather .jaws, .titanic{
-  margin: 60px auto 80px;
-}
-
-.Weather .leaves{
-  margin: 20px auto;
-}
-
-.Weather .current-description::first-letter,
-.forecast-description:first-letter {
-  text-transform: capitalize;
-}
-
-.Weather .info {
-  text-align: center;
-  margin: 100px auto 50px;
-}
-
-.Weather .local-info {
-  margin: 0 auto 30px;
-}
-
-.Weather .humidity-data {
-  margin: 0 8px 0 0;
-}
-
-.Weather .specifics-info,
-.week-days {
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.Weather .current-description, .real-feel, .sentence {
-  font-size: 20px;
-}
-
-.Weather .max-temp,
-.degree-sign-max {
-  color: #ec6e4c;
-}
-
-.Weather .min-temp,
-.degree-sign-min {
-  color: #0062cc;
-}
-
-.Weather
-.max-temp,
-.degree-sign-max {
-  font-weight: 600;
-}
-
-.Weather .humidity {
-  margin: 0 100px 10px 0;
-}
-.Weather .sunrise {
-  margin: 0 100px 10px 0;
-}
-.Weather .wind {
-  margin: 0 0 10px 100px;
-}
-.Weather .sunset {
-  margin: 0 0 10px 100px;
 }
 
 .Weather hr{

@@ -6,15 +6,20 @@ function RealFeel(props){
 
   if(props.unit === "imperial"){
     return(
-      <span className="RealFeel">
-        {realFeelFahrenheit} °F
-      </span>
+      <div className="RealFeel">
+        <span className="feel-temp">
+          {realFeelFahrenheit}
+        </span>°F
+      </div>
     );
   } else{
     return(
-      <span className="RealFeel">
-        {realFeelCelsius} °C
-      </span>
+      <div className="RealFeel">
+        <span className="feel-temp">
+          {realFeelCelsius}
+        </span>°C
+      </div>
+
     );
   }
 }

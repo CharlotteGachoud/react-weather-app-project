@@ -2,7 +2,7 @@ import React from "react";
 
 function Wind(props) {
     let windMetric = props.data.wind;
-    let windImperial = Math.round(props.data.wind * 0.6);
+    let windImperial = Math.round(props.data.wind * 0.621371);
 
     if (props.unit === "imperial") {
      return(

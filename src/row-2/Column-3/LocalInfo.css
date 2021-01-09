@@ -1,0 +1,29 @@
+.LocalInfo{
+  margin: 85px auto 50px;
+}
+
+.LocalInfo .conditions{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.LocalInfo .drop{
+ color: #0069D9;
+}
+
+.LocalInfo .fa-wind{
+  color: #939ab8;
+}
+
+.LocalInfo .humidity-data {
+  margin: 0 6px 0 0;
+}
+
+.LocalInfo .humidity,
+.LocalInfo .sunrise{
+  margin-bottom: 8px;
+}
+
+.LocalInfo .wind{
+  margin-bottom: 60px;
+}

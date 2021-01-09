@@ -4,6 +4,7 @@ import FormattedHour from "./FormattedHour";
 import WeatherIcon from "./WeatherIcon";
 import CurrentTemp from "./CurrentTemp";
 import RealFeel from "./RealFeel";
+import "./CurrentWeather.css";
 
 
 function CurrentWeather(props){
@@ -14,7 +15,7 @@ function CurrentWeather(props){
       <h1 className="city">{props.data.city}</h1>
                     <div className="date-time">
                       <p className="last-uptdated">Last updated</p>
-                      <p className="current-date">
+                      <p className="date">
                         <FormattedDate date={props.data.date}/>
                       </p>
                       <p className="time">
@@ -22,14 +23,14 @@ function CurrentWeather(props){
                       </p>
                     </div>
 
-                    <div className="current-temp">
+                    <div className="temperature">
                       <CurrentTemp data={props.data} unit={props.unit}/>
                     </div>
 
                     <div className="icons">
                       <WeatherIcon code={props.data.icon} alt={props.data.mainDescription}/>
                     </div>
-                    <div className="current-description">
+                    <div className="description">
                       {props.data.description}
                     </div>
                     <div className="real-feel">

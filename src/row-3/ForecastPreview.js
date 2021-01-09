@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "../row-2/Column-1/WeatherIcon";
+import "./ForecastPreview.css";
 
 
 function ForecastPreview(props){
@@ -29,7 +30,7 @@ function ForecastPreview(props){
           {description()}
         </div>
         <div className="temperature">
-          <strong>{fahrenheitMax} °F</strong> | {fahrenheitMin} °F
+          <span className="max-temp">{fahrenheitMax}</span><span className="unitMax">°F</span> <span className="separation">|</span> <span className="min-temp">{fahrenheitMin}</span><span className="unitMin">°F</span>
         </div>
       </div>
     );
@@ -46,7 +47,7 @@ function ForecastPreview(props){
             {description()}
           </div>
           <div className="temperature">
-            <strong>{celsiusMax} °C</strong> | {celsiusMin} °C
+            <span className="max-temp">{celsiusMax}</span><span className="unitMax">°C</span> <span className="separation">|</span> <span className="min-temp">{celsiusMin}</span><span className="unitMin">°C</span>
           </div>
         </div>
       );

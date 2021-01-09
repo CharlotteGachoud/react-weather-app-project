@@ -1,0 +1,27 @@
+.ChangeImage .giphy{
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.ChangeImage .jaws,
+.ChangeImage .titanic{
+  margin: 60px auto 0;
+}
+
+.ChangeImage .cozy-blanket{
+  margin: 50px auto 0;
+}
+
+.ChangeImage .leaves
+.ChangeImage .allergies{
+  margin: 20px auto 0;
+}
+
+.ChangeImage .sentence{
+  font-size: 20px;
+}
+
+.ChangeImage .via-giphy{
+  display: none;
+}

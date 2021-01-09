@@ -1,0 +1,36 @@
+.ForecastPreview .weekdays{
+  font-weight: 600;
+}
+
+.ForecastPreview .icon {
+  display: block;
+  margin: 5px auto;
+}
+
+.ForecastPreview .description{
+  margin: 0 auto 20px;
+}
+
+.ForecastPreview .description::first-letter{
+  text-transform: capitalize;
+}
+
+.ForecastPreview .max-temp,
+.ForecastPreview .unitMax{
+  color: #ec6e4c;
+  font-weight: 600;
+}
+
+.ForecastPreview .min-temp,
+.ForecastPreview .unitMin {
+  color: #0062cc;
+}
+
+.ForecastPreview .unitMax,
+.ForecastPreview .unitMin{
+  margin: 0 2px 0;
+}
+
+.ForecastPreview .separation{
+  color: #6a719c;
+}

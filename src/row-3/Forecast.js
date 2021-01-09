@@ -2,7 +2,6 @@ import React, { useState }  from "react";
 import ForecastPreview from "./ForecastPreview";
 import Loader from 'react-loader-spinner'
 import axios from "axios";
-import "./Forecast.css";
 
 function Forecast(props){
   const [loaded, setLoaded] = useState(false);

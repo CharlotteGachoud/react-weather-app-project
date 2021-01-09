@@ -8,7 +8,7 @@ function CurrentTemp(props){
     return(
       <div className="CurrentTemp">
         <div className="current-temp">
-          <span className="actual-temp">{tempFahrenheit}</span> °F
+          <span className="actual-temp">{tempFahrenheit}</span>°F
         </div>
       </div>
     );
@@ -16,7 +16,7 @@ function CurrentTemp(props){
     return(
       <div className="CurrentTemp">
         <div className="current-temp">
-          <span className="actual-temp">{tempCelsius}</span> °C
+          <span className="actual-temp">{tempCelsius}</span>°C
         </div>
       </div>
     );
