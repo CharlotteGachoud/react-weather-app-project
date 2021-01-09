@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherIcon from "./WeatherIcon";
+import WeatherIcon from "../row-2/Column-1/WeatherIcon";
 
 
 function ForecastPreview(props){

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import UnitsButtons from "./row-1/UnitsButtons";
-import CurrentWeather from "./row-2/CurrentWeather";
-import MiddleSection from "./row-2/MiddleSection";
-import LocalInfo from "./row-2/LocalInfo";
-import Forecast from "./row-2/Forecast";
-import Footer from "./row-2/Footer";
+import CurrentWeather from "./row-2/Column-1/CurrentWeather";
+import MiddleSection from "./row-2/Column-2/MiddleSection";
+import LocalInfo from "./row-2/Column-3/LocalInfo";
+import Forecast from "./row-3/Forecast";
+import Footer from "./row-3/Footer";
 import axios from "axios";
 import Loader from 'react-loader-spinner'
 import "./Weather.css";
@@ -28,6 +28,7 @@ function Weather(props){
       sunrise: response.data.sys.sunrise + response.data.timezone,
       sunset: response.data.sys.sunset + response.data.timezone,
       date: new Date(response.data.dt *1000),
+      amPmTime: new Date(response.data.dt *1000),
       lat: response.data.coord.lat,
       lon: response.data.coord.lon,
     });
@@ -65,7 +66,7 @@ function Weather(props){
 
   let form =  <form className="search-form" onSubmit={handleSubmit}>
                 <div className="row search-bar">
-                  <div className="col-10">
+                  <div className="col-8">
                     <input
                       type="text"
                       className="form-control city-search w-100"
@@ -75,7 +76,7 @@ function Weather(props){
                       onChange={handleCitySearch}
                     />
                   </div>
-                  <div className="col-1">
+                  <div className="col-2">
                     <button
                       type="submit"
                       className="btn btn-primary btn-search"
@@ -83,13 +84,13 @@ function Weather(props){
                       <i class="fas fa-search"></i>
                     </button>
                   </div>
-                  <div className="col-1">
+                  <div className="col-2">
                     <button
                       type="submit"
                       className="btn btn-primary btn-location"
                       onClick={handleLocation}
                     >
-                      <i class="fas fa-map-marked-alt"></i>
+                      <i class="fas fa-map-marker-alt"></i>
                     </button>
                   </div>
                 </div>
