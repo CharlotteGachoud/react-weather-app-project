@@ -1,0 +1,17 @@
+.Footer {
+  color: #3e8bdd;
+}
+
+.Footer a{
+  color: #0974e6;
+  transition: all 200ms ease-in-out;
+}
+
+.Footer a:hover{
+  text-decoration: none;
+  color: #0056B3;
+}
+
+.Footer .open-source-link, .author-link, .icon-link{
+   font-weight: 600;
+}

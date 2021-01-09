@@ -142,14 +142,10 @@ body {
   color: #0062cc;
 }
 
-.Weather .open-source-link,
+.Weather
 .max-temp,
 .degree-sign-max {
   font-weight: 600;
-}
-
-.Weather .code-by {
-  color: #0062cc;
 }
 
 .Weather .humidity {
