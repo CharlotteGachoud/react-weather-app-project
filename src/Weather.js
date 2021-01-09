@@ -35,7 +35,7 @@ function Weather(props){
   }
 
   function search(){
-    const apiKey = "2c7531b6bc89a83ae4af0fd1004343c9";
+    const apiKey = "027401657e14d2712c8487adaadbd48b";
     let unit = "metric";
     let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
@@ -51,7 +51,7 @@ function Weather(props){
   }
 
   function findLocation(position){
-    const apiKey = "2c7531b6bc89a83ae4af0fd1004343c9";
+    const apiKey = "027401657e14d2712c8487adaadbd48b";
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=en`;
