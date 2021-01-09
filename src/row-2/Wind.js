@@ -7,13 +7,13 @@ function Wind(props) {
     if (props.unit === "imperial") {
      return(
        <div className="Wind">
-         💨 {windImperial} mph
+         <i class="fas fa-wind"></i> {windImperial} mph
        </div>
     );       
     } else {
      return(
       <div className="Wind">
-        💨 {windMetric} km/h
+        <i class="fas fa-wind"></i> {windMetric} km/h
       </div>
     ); 
     }

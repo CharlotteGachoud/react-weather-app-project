@@ -12,7 +12,7 @@ function LocalInfo(props){
            Humidity
          </div>
          <div className ="info-data humidity-data">
-           💧 {props.data.humidity}%
+           <i class="fas fa-tint"></i> {props.data.humidity}%
          </div>
        </div>
        <div className="wind">

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Sunset.css";
 
 function Sunset(props) {
     let setTime = new Date(props.sunset * 1000);
@@ -9,7 +10,8 @@ function Sunset(props) {
 
     return(
       <div className="Sunrise">
-        🌇 {setHour}:{setMinutes}
+        <img src="Images/sunset.svg" alt="sunset" className="icon-sun"/>
+        {setHour}:{setMinutes}
       </div>
     );
 }

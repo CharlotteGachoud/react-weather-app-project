@@ -61,12 +61,22 @@ function Weather(props){
                       onChange={handleCitySearch}
                     />
                   </div>
-                  <div className="col-2">
-                    <input
+                  <div className="col-1">
+                    <button
                       type="submit"
                       className="btn btn-primary btn-search"
-                      value="🔎 Search"
-                    />
+                    >
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                  <div className="col-1">
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-location"
+                      onClick="handleLocation"
+                    >
+                      <i class="fas fa-map-marked-alt"></i>
+                    </button>
                   </div>
                 </div>
               </form>;

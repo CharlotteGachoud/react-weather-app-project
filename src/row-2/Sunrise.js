@@ -1,4 +1,5 @@
 import React from "react";
+import "./Sunrise.css";
 
 function Sunrise(props) {
     let riseTime = new Date(props.sunrise * 1000);
@@ -9,7 +10,7 @@ function Sunrise(props) {
 
     return(
       <div className="Sunrise">
-        🌄 {riseHour}:{riseMinutes}
+        <img src="Images/sunrise.svg" alt="sunrise" className="icon-sun"/> {riseHour}:{riseMinutes}
       </div>
     );
 }
